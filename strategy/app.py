@@ -9,6 +9,9 @@ from strategy.drinkstrategies.tea_drink_strategy import TeaDrinkStrategy
 from strategy.drinkstrategies.water_drink_strategy import WaterDrinkStrategy
 from strategy.people.programmer import Programmer
 
+# STRATEGY PATTERN ################################################################
+
+print("\n--- STRATEGY PATTERN\n")
 
 # Creating the code strategies
 python_code_strategy = PythonCodeStrategy()
