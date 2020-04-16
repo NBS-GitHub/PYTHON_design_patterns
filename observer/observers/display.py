@@ -8,7 +8,7 @@ class Display(Observer):
         self.temperature = 0
 
     def update(self):
-        self.temperature = self.thermometer.get_temperature()
+        self.temperature = self.thermometer.get_data()
         self.display()
 
     def display(self):

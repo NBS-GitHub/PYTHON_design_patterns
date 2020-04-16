@@ -1,24 +1,27 @@
-class Thermometer:
+from observer.observables.observable import Observable
+
+
+class Thermometer(Observable):
     def __init__(self):
         self.displays = list()
         self.temperature = 0
 
-    def add_display(self, display):
+    def add_observer(self, display):
         if display not in self.displays:
             self.displays.append(display)
 
-    def remove_display(self, display):
+    def remove_observer(self, display):
         if display in self.displays:
             self.displays.remove(display)
 
-    def notify_displays(self):
+    def notify_observers(self):
         for display in self.displays:
             display.update()
 
-    def get_temperature(self):
+    def get_data(self):
         return self.temperature
 
-    def set_temperature(self, new_temperature):
+    def set_data(self, new_temperature):
         if new_temperature != self.temperature:
             self.temperature = new_temperature
-            self.notify_displays()
+            self.notify_observers()
